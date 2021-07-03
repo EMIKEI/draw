@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: auto;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.main {
+  font-family: "Noto Sans KR";
+  text-align: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: 45vh 0 0 0;
+}
+
+.requestBar {
+  font-family: "Noto Sans KR";
+  font-size: 0.95rem;
+  border: 2px solid #525252;
+  border-radius: 5px;
+  width: 60vw;
+  max-width: 250px;
+  height: 35px;
+  margin: 20px 0;
+  padding: 0 10px;
+}
+
+.boxZone {
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 100vh 100vh;
+  position: absolute;
+}
+
+.boxZone_main {
+  height: 100vh;
+  width: 100vw;
+  background-color: #d4d4d4;
+  border-radius: 20px 20px 0px 0px;
+  display: grid;
+  grid-template-rows: 50px 2fr 1fr;
+}
+.closeBut {
+  max-width: 50px;
+  height: 50px;
+  font-size: 2rem;
+  background-color: #00000000;
+  color: #525252;
+  transition: ease-in transform 0.25s;
+}
+.closeBut:hover {
+  transform: rotate(-90deg);
+}
+.boxZone img {
+  width: 50vw;
+  max-width: 300px;
+  display: block;
+  margin: auto;
+}
+.box_explain {
+  font-family: "Noto Sans KR";
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
