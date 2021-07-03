@@ -11,10 +11,10 @@ const closeBut = document.querySelector(".closeBut")
         }else{
             box_explain.innerHTML = `네가 원하는 "${requestBar.value}"은(는) 이 상자 안에 들어있어. `;
             requestBar.value = null ;
-            closeBut.focus();
+            requestBar.blur();
+            boxZone.classList.remove("hide");
             
             setTimeout(function(){
-                boxZone.classList.remove("hide");
                 window.scrollTo({
                     top: boxZone.offsetHeight/2.15,
                     behavior: "smooth"
