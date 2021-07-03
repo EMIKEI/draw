@@ -2,6 +2,7 @@ const requestBar = document.querySelector(".requestBar")
 const requestSubmit = document.querySelector(".requestSubmit")
 const boxZone = document.querySelector(".boxZone")
 const box_explain = document.querySelector(".box_explain")
+const closeBut = document.querySelector(".closeBut")
 
 {
     requestSubmit.addEventListener("click", function(){
@@ -10,19 +11,19 @@ const box_explain = document.querySelector(".box_explain")
         }else{
             boxZone.classList.remove("hide");
             box_explain.innerHTML = `네가 원하는 "${requestBar.value}"은(는) 이 상자 안에 들어있어. `;
+            closeBut.focus();
             requestBar.value = null ;
-            requestBar.inputmode = "none";
-            window.scrollBy({
-                top: boxZone.offsetHeight/2.15,
-                behavior: "smooth"
-            })
+            setTimeout(function(){
+                window.scrollTo({
+                    top: boxZone.offsetHeight/2.15,
+                    behavior: "smooth"
+                })
+            }, 100)
         }
     })
 }
 
 {
-    const closeBut = document.querySelector(".closeBut")
-    
     closeBut.addEventListener("click", function(){
         boxZone.classList.add("hide")
     })
