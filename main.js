@@ -9,16 +9,17 @@ const closeBut = document.querySelector(".closeBut")
         if(requestBar.value === ""){
             alert("입력해주시길 바랍니다.")
         }else{
-            boxZone.classList.remove("hide");
             box_explain.innerHTML = `네가 원하는 "${requestBar.value}"은(는) 이 상자 안에 들어있어. `;
-            closeBut.focus();
             requestBar.value = null ;
+            closeBut.focus();
+            
             setTimeout(function(){
+                boxZone.classList.remove("hide");
                 window.scrollTo({
                     top: boxZone.offsetHeight/2.15,
                     behavior: "smooth"
                 })
-            }, 100)
+            }, 300)
         }
     })
 }
