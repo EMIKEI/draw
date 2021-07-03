@@ -11,6 +11,7 @@ const box_explain = document.querySelector(".box_explain")
             boxZone.classList.remove("hide");
             box_explain.innerHTML = `네가 원하는 "${requestBar.value}"은(는) 이 상자 안에 들어있어. `;
             requestBar.value = null ;
+            requestBar.inputmode = "none";
             window.scrollBy({
                 top: boxZone.offsetHeight/2.15,
                 behavior: "smooth"

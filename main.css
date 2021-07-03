@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  margin: 45vh 0 0 0;
+  margin: 40vh 0 0 0;
 }
 
 .requestBar {
@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
   max-width: 250px;
   height: 35px;
   margin: 20px 0;
-  padding: 0 10px;
+  padding: 2.5px 10px;
 }
 
 .boxZone {
@@ -59,6 +59,7 @@ body::-webkit-scrollbar {
   background-color: #00000000;
   color: #525252;
   transition: ease-in transform 0.25s;
+  cursor: pointer;
 }
 .closeBut:hover {
   transform: rotate(-90deg);
